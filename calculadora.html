@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- METADATOS Y CONFIGURACIÓN BASE DEL DOCUMENTO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora interactiva de presupuesto de MatchaBar Venezuela: selecciona productos, cantidades y servicios adicionales en Caracas para obtener tu cotización en tiempo real.">
+    <title>MatchaBar | Calculadora de Presupuesto</title>
+
+    <!-- FUENTES DE GOOGLE FONTS (MONTSERRAT Y DANCING SCRIPT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- HOJA DE ESTILOS EXTERNA PRINCIPAL -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER GLOBAL CON LOGOTIPO Y NAVEGACIÓN HORIZONTAL -->
+    <header class="site-header">
+        <div class="contenedor header-contenedor">
+            <!-- LOGOTIPO CORPORATIVO MATCHABAR CON ÍCONO SVG BOTÁNICO -->
+            <a href="index.html" class="logo-marca" aria-label="Inicio de MatchaBar">
+                <svg class="logo-icono" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M32 54C32 54 12 42 12 22C12 16 16 10 22 10C28 10 32 18 32 24C32 18 36 10 42 10C48 10 52 16 52 22C52 42 32 54 32 54Z" fill="#A1C349"/>
+                    <path d="M32 54V22" stroke="#243010" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M32 36L21 26" stroke="#243010" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M32 32L43 22" stroke="#243010" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span>MATCHABAR</span>
+            </a>
+
+            <!-- BOTÓN DE MENÚ MÓVIL -->
+            <button type="button" class="btn-menu-movil" id="btn-menu-movil" aria-label="Abrir menú de navegación" aria-expanded="false">
+                &#9776;
+            </button>
+
+            <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
+            <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-enlace">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-enlace">Nosotros</a>
+                    </li>
+                    <!-- ELEMENTO CON SUBMENÚ DESPLEGABLE ANIMADO EN CSS -->
+                    <li class="nav-item tiene-submenu">
+                        <a href="productos.html" class="nav-enlace">
+                            Productos <span class="flecha-submenu" aria-hidden="true">&#9662;</span>
+                        </a>
+                        <!-- SUBMENÚ DE PRODUCTOS Y SERVICIOS -->
+                        <ul class="submenu" aria-label="Submenú de productos">
+                            <li>
+                                <a href="producto-cold-brew.html" class="submenu-enlace">Cold Brew Concentrate 350 ml</a>
+                            </li>
+                            <li>
+                                <a href="producto-iced-latte.html" class="submenu-enlace">Matcha Iced Latte Ready-to-Pour</a>
+                            </li>
+                            <li>
+                                <a href="producto-kit-ceremonial.html" class="submenu-enlace">Kit Ritual Ceremonial &amp; Chasen</a>
+                            </li>
+                            <li>
+                                <a href="producto-pack-corporativo.html" class="submenu-enlace">Pack Corporativo &amp; Suscripción</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculadora.html" class="nav-enlace activo">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-enlace">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DE LA CALCULADORA -->
+    <main>
+
+        <!-- SECCIÓN ÚNICA: CALCULADORA DE PRESUPUESTO DE PRODUCTOS Y SERVICIOS -->
+        <section class="seccion seccion-crema animar-entrada" id="calculadora-presupuesto">
+            <div class="contenedor">
+                <!-- ENCABEZADO DE LA CALCULADORA -->
+                <div class="encabezado-seccion">
+                    <span class="etiqueta-superior">Cotizador Interactivo en Tiempo Real</span>
+                    <h1>Calculadora de Presupuesto MatchaBar</h1>
+                    <span class="eslogan-script">Planifica tu pedido a tu medida.</span>
+                    <p>
+                        Marca los productos y servicios adicionales que necesitas y ajusta las cantidades para calcular automáticamente el subtotal por ítem, los descuentos por volumen (10% en pedidos iguales o superiores a $100.00 USD) y el total general de tu orden en Caracas.
+                    </p>
+                </div>
+
+                <!-- REJILLA PRINCIPAL: SELECTOR IZQUIERDO Y TABLA RESUMEN DERECHA -->
+                <div class="calculadora-grid">
+
+                    <!-- FORMULARIO DE SELECCIÓN DE PRODUCTOS Y SERVICIOS -->
+                    <form id="form-calculadora" class="panel-calculadora" novalidate>
+                        <!-- BLOQUE 1: PRODUCTOS DEL CATÁLOGO -->
+                        <h2>1. Productos MatchaBar</h2>
+                        <p>
+                            Activa la casilla de cada presentación e indica la cantidad de unidades o packs que deseas incluir.
+                        </p>
+
+                        <!-- ÍTEM 1: COLD BREW CONCENTRATE -->
+                        <div class="item-calculadora">
+                            <input
+                                type="checkbox"
+                                id="chk-cold-brew"
+                                class="calc-checkbox"
+                                data-nombre="Cold Brew Concentrate 350 ml"
+                                data-precio="14.50"
+                                data-target="qty-cold-brew"
+                            >
+                            <label for="chk-cold-brew" class="item-calc-info">
+                                <span class="item-calc-nombre">Cold Brew Concentrate 350 ml</span>
+                                <span class="item-calc-desc">Botella rPET reciclable (7 porciones, 0% azúcar añadida)</span>
+                            </label>
+                            <span class="item-calc-precio">$14.50</span>
+                            <input
+                                type="number"
+                                id="qty-cold-brew"
+                                class="input-cantidad"
+                                value="1"
+                                min="1"
+                                max="50"
+                                step="1"
+                                disabled
+                                aria-label="Cantidad de Cold Brew Concentrate 350 ml"
+                            >
+                        </div>
+
+                        <!-- ÍTEM 2: PACK MATCHA ICED LATTE -->
+                        <div class="item-calculadora">
+                            <input
+                                type="checkbox"
+                                id="chk-iced-latte"
+                                class="calc-checkbox"
+                                data-nombre="Matcha Iced Latte Ready-to-Pour"
+                                data-precio="26.00"
+                                data-target="qty-iced-latte"
+                            >
+                            <label for="chk-iced-latte" class="item-calc-info">
+                                <span class="item-calc-nombre">Matcha Iced Latte Ready-to-Pour</span>
+                                <span class="item-calc-desc">Dúo de 2 botellas (700 ml totales) + recetario barista</span>
+                            </label>
+                            <span class="item-calc-precio">$26.00</span>
+                            <input
+                                type="number"
+                                id="qty-iced-latte"
+                                class="input-cantidad"
+                                value="1"
+                                min="1"
+                                max="50"
+                                step="1"
+                                disabled
+                                aria-label="Cantidad de Pack Matcha Iced Latte"
+                            >
+                        </div>
+
+                        <!-- ÍTEM 3: KIT RITUAL CEREMONIAL -->
+                        <div class="item-calculadora">
+                            <input
+                                type="checkbox"
+                                id="chk-kit-ceremonial"
+                                class="calc-checkbox"
+                                data-nombre="Kit Ritual Ceremonial & Chasen"
+                                data-precio="38.00"
+                                data-target="qty-kit-ceremonial"
+                            >
+                            <label for="chk-kit-ceremonial" class="item-calc-info">
+                                <span class="item-calc-nombre">Kit Ritual Ceremonial &amp; Chasen</span>
+                                <span class="item-calc-desc">Batidor Chasen de bambú + accesorios + botella 350 ml</span>
+                            </label>
+                            <span class="item-calc-precio">$38.00</span>
+                            <input
+                                type="number"
+                                id="qty-kit-ceremonial"
+                                class="input-cantidad"
+                                value="1"
+                                min="1"
+                                max="30"
+                                step="1"
+                                disabled
+                                aria-label="Cantidad de Kit Ritual Ceremonial"
+                            >
+                        </div>
+
+                        <!-- ÍTEM 4: PACK CORPORATIVO -->
+                        <div class="item-calculadora">
+                            <input
+                                type="checkbox"
+                                id="chk-pack-corporativo"
+                                class="calc-checkbox"
+                                data-nombre="Pack Corporativo & Suscripción"
+                                data-precio="95.00"
+                                data-target="qty-pack-corporativo"
+                            >
+                            <label for="chk-pack-corporativo" class="item-calc-info">
+                                <span class="item-calc-nombre">Pack Corporativo &amp; Suscripción</span>
+                                <span class="item-calc-desc">Caja mensual de 8 botellas (56 porciones para oficinas/gyms)</span>
+                            </label>
+                            <span class="item-calc-precio">$95.00</span>
+                            <input
+                                type="number"
+                                id="qty-pack-corporativo"
+                                class="input-cantidad"
+                                value="1"
+                                min="1"
+                                max="20"
+                                step="1"
+                                disabled
+                                aria-label="Cantidad de Pack Corporativo"
+                            >
+                        </div>
+
+                        <!-- BLOQUE 2: SERVICIOS ADICIONALES -->
+                        <h2 style="margin-top: 28px;">2. Servicios Adicionales</h2>
+                        <p>
+                            Complementa tu pedido con despacho local en Caracas, personalización de marca o experiencias presenciales de degustación.
+                        </p>
+
+                        <!-- SERVICIO 1: DELIVERY EN MUNICIPIO LIBERTADOR -->
+                        <div class="item-calculadora">
+                            <input
+                                type="checkbox"
+                                id="chk-delivery"
+                                class="calc-checkbox"
+                                data-nombre="Delivery en Municipio Libertador"
+                                data-precio="4.00"
+                                data-target="qty-delivery"
+                            >
+                            <label for="chk-delivery" class="item-calc-info">
+                                <span class="item-calc-nombre">Delivery en Municipio Libertador</span>
+                                <span class="item-calc-desc">Despacho refrigerado el mismo día (La Candelaria, El Recreo y zonas aledañas)</span>
+                            </label>
+                            <span class="item-calc-precio">$4.00</span>
+                            <input
+                                type="number"
+                                id="qty-delivery"
+                                class="input-cantidad"
+                                value="1"
+                                min="1"
+                                max="10"
+                                step="1"
+                                disabled
+                                aria-label="Cantidad de envíos Delivery en Municipio Libertador"
+                            >
+                        </div>
+
+                        <!-- SERVICIO 2: PERSONALIZACIÓN DE EMPAQUE CORPORATIVO -->
+                        <div class="item-calculadora">
+                            <input
+                                type="checkbox"
+                                id="chk-personalizacion"
+                                class="calc-checkbox"
+                                data-nombre="Personalización de Empaque Corporativo"
+                                data-precio="18.00"
+                                data-target="qty-personalizacion"
+                            >
+                            <label for="chk-personalizacion" class="item-calc-info">
+                                <span class="item-calc-nombre">Personalización de Empaque Corporativo</span>
+                                <span class="item-calc-desc">Etiqueta termoencogible co-branded con el logotipo de tu empresa (por lote)</span>
+                            </label>
+                            <span class="item-calc-precio">$18.00</span>
+                            <input
+                                type="number"
+                                id="qty-personalizacion"
+                                class="input-cantidad"
+                                value="1"
+                                min="1"
+                                max="10"
+                                step="1"
+                                disabled
+                                aria-label="Cantidad de lotes de Personalización de Empaque Corporativo"
+                            >
+                        </div>
+
+                        <!-- SERVICIO 3: CATA / DEGUSTACIÓN WELLNESS -->
+                        <div class="item-calculadora">
+                            <input
+                                type="checkbox"
+                                id="chk-cata-wellness"
+                                class="calc-checkbox"
+                                data-nombre="Cata / Degustación Wellness"
+                                data-precio="45.00"
+                                data-target="qty-cata-wellness"
+                            >
+                            <label for="chk-cata-wellness" class="item-calc-info">
+                                <span class="item-calc-nombre">Cata / Degustación Wellness</span>
+                                <span class="item-calc-desc">Sesión guiada presencial en Caracas con barra fría de matcha (hasta 15 personas)</span>
+                            </label>
+                            <span class="item-calc-precio">$45.00</span>
+                            <input
+                                type="number"
+                                id="qty-cata-wellness"
+                                class="input-cantidad"
+                                value="1"
+                                min="1"
+                                max="5"
+                                step="1"
+                                disabled
+                                aria-label="Cantidad de sesiones de Cata / Degustación Wellness"
+                            >
+                        </div>
+
+                        <!-- BOTONES DE CONTROL DEL FORMULARIO -->
+                        <div class="grupo-botones">
+                            <button type="submit" id="btn-calcular" class="btn btn-primario">Calcular Presupuesto</button>
+                            <button type="button" id="btn-limpiar" class="btn btn-secundario">Limpiar Selección</button>
+                        </div>
+                    </form>
+
+                    <!-- PANEL DERECHO: TABLA DE RESUMEN DINÁMICO DE PRESUPUESTO -->
+                    <aside class="panel-resumen" id="panel-resumen" aria-live="polite">
+                        <h2>Resumen de Presupuesto</h2>
+
+                        <!-- INDICADOR DINÁMICO DE DESCUENTO POR VOLUMEN -->
+                        <div class="aviso-descuento" id="aviso-descuento">
+                            Agrega $100.00 USD o más en tu pedido para obtener un <strong>10% de descuento automático</strong> por volumen.
+                        </div>
+
+                        <!-- TABLA HTML SEMÁNTICA DE DESGLOSE Y TOTAL GENERAL -->
+                        <div class="tabla-contenedor">
+                            <table class="tabla-matcha" id="tabla-presupuesto">
+                                <thead>
+                                    <tr>
+                                        <th>Producto / Servicio</th>
+                                        <th class="celda-numero">Cant.</th>
+                                        <th class="celda-numero">P. Unit.</th>
+                                        <th class="celda-numero">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resumen-tbody">
+                                    <tr>
+                                        <td colspan="4">Selecciona uno o más productos o servicios para ver el cálculo detallado.</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3">Subtotal Bruto</td>
+                                        <td class="celda-numero" id="valor-subtotal">$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">Descuento por Volumen (10%)</td>
+                                        <td class="celda-numero" id="valor-descuento">-$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">TOTAL GENERAL (USD)</td>
+                                        <td class="celda-numero" id="valor-total">$0.00</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <p>
+                            Los precios expresados en USD son referenciales para pedidos gestionados en el Municipio Libertador y el área metropolitana de Caracas. Confirma disponibilidad y métodos de pago con un asesor en línea.
+                        </p>
+
+                        <!-- ENLACE DE CONSULTA A WHATSAPP Y CATÁLOGO -->
+                        <div class="grupo-botones" style="flex-direction: column;">
+                            <a href="https://wa.link/dwrt1z" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+                                Enviar Consulta por WhatsApp
+                            </a>
+                            <a href="productos.html" class="btn btn-secundario btn-sm" style="width: 100%;">
+                                Ver Detalles del Catálogo
+                            </a>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER CORPORATIVO GLOBAL -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="footer-grid">
+                <!-- COLUMNA 1: RESUMEN DE MARCA -->
+                <div class="footer-columna">
+                    <h2>MATCHABAR</h2>
+                    <p>
+                        Concentrado líquido natural de té matcha en formato práctico ready-to-pour. Energía limpia, sin azúcar añadida y en empaque reciclable rPET para acompañar tu ritmo diario.
+                    </p>
+                    <span class="eslogan-script">Más verde, más tú.</span>
+                </div>
+
+                <!-- COLUMNA 2: ENLACES RÁPIDOS -->
+                <div class="footer-columna">
+                    <h2>Navegación Rápida</h2>
+                    <ul class="footer-enlaces">
+                        <li><a href="index.html">&#8250; Inicio</a></li>
+                        <li><a href="nosotros.html">&#8250; Nosotros</a></li>
+                        <li><a href="productos.html">&#8250; Catálogo de Productos</a></li>
+                        <li><a href="calculadora.html">&#8250; Calculadora de Presupuesto</a></li>
+                        <li><a href="contacto.html">&#8250; Contacto y Horarios</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 3: UBICACIÓN Y WHATSAPP DIRECTO -->
+                <div class="footer-columna">
+                    <h2>Sede Caracas</h2>
+                    <div class="footer-meta">
+                        Av. Universidad, Parroquia La Candelaria, C.C. Parque Caracas, Local 14.<br>
+                        Municipio Libertador, Distrito Capital, Venezuela.<br>
+                        Tel: +58 212-555-8490 &bull; contacto@matchabarve.com<br>
+                        Redes: @matchabar.ve
+                    </div>
+                    <a href="https://wa.link/dwrt1z" target="_blank" rel="noopener noreferrer" class="btn btn-claro btn-sm">
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRANJA DE DERECHOS DE AUTOR -->
+        <div class="footer-base">
+            <div class="contenedor">
+                &copy; 2026 MatchaBar Venezuela — Distrito Capital, Municipio Libertador. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS DEL SITIO Y MÓDULO DE CALCULADORA -->
+    <script src="js/main.js"></script>
+    <script src="js/calculadora.js"></script>
+</body>
+</html>

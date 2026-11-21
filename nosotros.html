@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- METADATOS Y CONFIGURACIÓN BASE DEL DOCUMENTO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la historia de MatchaBar, nuestra misión, visión ecológica, comunidad urbana en Caracas y las ventajas de nuestro Cold Brew Concentrate.">
+    <title>MatchaBar | Nosotros — Historia, Misión y Valores</title>
+
+    <!-- FUENTES DE GOOGLE FONTS (MONTSERRAT Y DANCING SCRIPT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- HOJA DE ESTILOS EXTERNA PRINCIPAL -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER GLOBAL CON LOGOTIPO Y NAVEGACIÓN HORIZONTAL -->
+    <header class="site-header">
+        <div class="contenedor header-contenedor">
+            <!-- LOGOTIPO CORPORATIVO MATCHABAR CON ÍCONO SVG BOTÁNICO -->
+            <a href="index.html" class="logo-marca" aria-label="Inicio de MatchaBar">
+                <svg class="logo-icono" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M32 54C32 54 12 42 12 22C12 16 16 10 22 10C28 10 32 18 32 24C32 18 36 10 42 10C48 10 52 16 52 22C52 42 32 54 32 54Z" fill="#A1C349"/>
+                    <path d="M32 54V22" stroke="#243010" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M32 36L21 26" stroke="#243010" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M32 32L43 22" stroke="#243010" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span>MATCHABAR</span>
+            </a>
+
+            <!-- BOTÓN DE MENÚ MÓVIL -->
+            <button type="button" class="btn-menu-movil" id="btn-menu-movil" aria-label="Abrir menú de navegación" aria-expanded="false">
+                &#9776;
+            </button>
+
+            <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
+            <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-enlace">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-enlace activo">Nosotros</a>
+                    </li>
+                    <!-- ELEMENTO CON SUBMENÚ DESPLEGABLE ANIMADO EN CSS -->
+                    <li class="nav-item tiene-submenu">
+                        <a href="productos.html" class="nav-enlace">
+                            Productos <span class="flecha-submenu" aria-hidden="true">&#9662;</span>
+                        </a>
+                        <!-- SUBMENÚ DE PRODUCTOS Y SERVICIOS -->
+                        <ul class="submenu" aria-label="Submenú de productos">
+                            <li>
+                                <a href="producto-cold-brew.html" class="submenu-enlace">Cold Brew Concentrate 350 ml</a>
+                            </li>
+                            <li>
+                                <a href="producto-iced-latte.html" class="submenu-enlace">Matcha Iced Latte Ready-to-Pour</a>
+                            </li>
+                            <li>
+                                <a href="producto-kit-ceremonial.html" class="submenu-enlace">Kit Ritual Ceremonial &amp; Chasen</a>
+                            </li>
+                            <li>
+                                <a href="producto-pack-corporativo.html" class="submenu-enlace">Pack Corporativo &amp; Suscripción</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculadora.html" class="nav-enlace">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-enlace">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL (EXACTAMENTE 2 SECCIONES CON IMÁGENES ALTERNADAS) -->
+    <main>
+
+        <!-- SECCIÓN 1: IMAGEN A LA IZQUIERDA, HISTORIA Y COMUNIDAD A LA DERECHA -->
+        <section class="seccion seccion-crema animar-entrada" id="historia-comunidad">
+            <div class="contenedor">
+                <div class="split-layout">
+                    <!-- IMAGEN A LA IZQUIERDA -->
+                    <div class="split-media">
+                        <figure class="marco-imagen">
+                            <img src="assets/img/lifestyle-matchabar.jpg" alt="Persona sonriente sosteniendo la botella de MatchaBar Cold Brew Concentrate 350 ml">
+                        </figure>
+                    </div>
+
+                    <!-- TEXTO A LA DERECHA: HISTORIA Y SEGMENTACIÓN DE LA COMUNIDAD -->
+                    <div class="split-contenido">
+                        <span class="etiqueta-superior">Quiénes Somos</span>
+                        <h1>Rediseñando el Ritual del Matcha para el Ritmo de Caracas</h1>
+                        <span class="eslogan-script">Tu energía natural, en cada momento.</span>
+
+                        <p>
+                            MatchaBar nació con una premisa clara: democratizar el bienestar del té matcha orgánico sin sacrificar tiempo ni estética. Al rediseñar el empaque tradicional del té matcha en polvo y convertirlo en un concentrado líquido de extracción en frío (cold brew), eliminamos la necesidad de tamizar y batir durante minutos, convirtiendo un ritual complejo en una experiencia <strong>ready-to-pour</strong> lista para acompañar cualquier jornada.
+                        </p>
+
+                        <h2>Nuestra Comunidad y Estilo de Vida</h2>
+                        <ul class="lista-especificaciones">
+                            <li>
+                                <strong>Perfil Demográfico:</strong> Diseñado para jóvenes y adultos entre 21 y 38 años —unisex y con enfoque en bienestar consciente— incluyendo profesionales, estudiantes universitarios, creativos, desarrolladores y entusiastas del fitness que optimizan su tiempo sin renunciar a una alimentación saludable.
+                            </li>
+                            <li>
+                                <strong>Presencia Geográfica:</strong> Nacimos en el entorno dinámico de Caracas (Municipio Libertador, Distrito Capital), integrándonos en áreas urbanas con cultura de cafés de especialidad, tiendas orgánicas y gimnasios boutique, ideales para el clima cálido donde los <em>iced lattes</em> refrescantes son parte de la rutina diaria.
+                            </li>
+                            <li>
+                                <strong>Enfoque Psicográfico y Conductual:</strong> Conectamos con personas activas y orientadas a la productividad consciente que valoran la energía sostenida sin picos de ansiedad, buscan una alternativa rápida y nutritiva frente al café tradicional y aprecian un diseño funcional que luce bien en sus espacios cotidianos.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TEXTO A LA IZQUIERDA, IMAGEN A LA DERECHA + TABLA COMPARATIVA -->
+        <section class="seccion seccion-salvia animar-entrada" id="mision-vision-comparativa">
+            <div class="contenedor">
+                <div class="split-layout">
+                    <!-- TEXTO A LA IZQUIERDA: MISIÓN, VISIÓN Y VALORES ECOLÓGICOS -->
+                    <div class="split-contenido">
+                        <span class="etiqueta-superior">Propósito &amp; Sostenibilidad</span>
+                        <h2>Misión, Visión y Compromiso Ecológico</h2>
+
+                        <div class="grid-dos-tarjetas">
+                            <!-- TARJETA MISIÓN -->
+                            <article class="tarjeta-editorial">
+                                <h3>Nuestra Misión</h3>
+                                <p>
+                                    Ofrecer una alternativa natural, rápida y de alta pureza al café tradicional mediante concentrados líquidos de té matcha en frío que aporten vitalidad sostenida y practicidad diaria, manteniendo un compromiso real con la salud y el medio ambiente.
+                                </p>
+                            </article>
+
+                            <!-- TARJETA VISIÓN -->
+                            <article class="tarjeta-editorial">
+                                <h3>Nuestra Visión</h3>
+                                <p>
+                                    Consolidarnos como la marca líder en bebidas funcionales ready-to-pour en Venezuela y Latinoamérica, reconocida por innovar en empaques ergonómicos reciclables y fomentar hábitos de productividad consciente en entornos urbanos.
+                                </p>
+                            </article>
+                        </div>
+
+                        <h3>Valores Ecológicos y Sellos de Pureza</h3>
+                        <p>
+                            Cada botella de MatchaBar Cold Brew Concentrate refleja nuestra filosofía limpia: formulamos nuestro extracto con <strong>0% azúcar añadida</strong> y hojas seleccionadas de <strong>extracto orgánico</strong>, envasadas en una botella de <strong>PET reciclable (rPET)</strong> con etiqueta termoencogible mate y ventana transparente dosificadora para aprovechar hasta la última gota sin desperdicios.
+                        </p>
+
+                        <div class="sellos-lista">
+                            <span class="badge-matcha">&#10003; 0% Azúcar Añadida</span>
+                            <span class="badge-matcha">&#10003; Extracto Orgánico</span>
+                            <span class="badge-matcha">&#10003; Envase rPET Reciclable</span>
+                        </div>
+                    </div>
+
+                    <!-- IMAGEN A LA DERECHA -->
+                    <div class="split-media">
+                        <figure class="marco-imagen">
+                            <img src="assets/img/botella-reverso-sellos.jpg" alt="Vista posterior de la botella MatchaBar mostrando los sellos de 0% azúcar añadida, extracto orgánico y botella PET reciclable">
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- TABLA HTML SEMÁNTICA COMPARATIVA: MATCHA TRADICIONAL VS MATCHABAR -->
+                <div style="margin-top: 48px;">
+                    <h2>Comparativa: Matcha Tradicional en Polvo vs. MatchaBar Cold Brew Concentrate</h2>
+                    <p>
+                        Analiza de un vistazo cómo nuestra innovación en extracción en frío y diseño de envase optimiza el tiempo, la dosificación y la experiencia de consumo diario.
+                    </p>
+
+                    <div class="tabla-contenedor">
+                        <table class="tabla-matcha">
+                            <thead>
+                                <tr>
+                                    <th>Criterio de Evaluación</th>
+                                    <th>Matcha Tradicional en Polvo</th>
+                                    <th>MatchaBar Cold Brew Concentrate (350 ml)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Tiempo de preparación</strong></td>
+                                    <td>3 a 5 minutos (calentar agua, tamizar y batir)</td>
+                                    <td>Menos de 15 segundos (formato listo para servir / ready-to-pour)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Utensilios requeridos</strong></td>
+                                    <td>Cuenco chawan, batidor chasen, tamiz y cuchara medidora</td>
+                                    <td>Ninguno adicional; solo tu vaso con agua o leche fría/caliente</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Control de dosificación</strong></td>
+                                    <td>Manual y variable por cucharada</td>
+                                    <td>Preciso gracias a la tapa antigoteo y ventana medidora (50 ml – 350 ml)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Portabilidad y empaque</strong></td>
+                                    <td>Lata o bolsa frágil vulnerable a humedad y derrames</td>
+                                    <td>Botella ergonómica rPET reciclable, ligera y tapa de rosca hermética</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Textura y disolución</strong></td>
+                                    <td>Riesgo de grumos si no se bate adecuadamente</td>
+                                    <td>Extracto líquido verde esmeralda homogéneo sin grumos</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Perfil nutricional</strong></td>
+                                    <td>Variable según mezclas comerciales azucaradas</td>
+                                    <td>0% azúcar añadida y extracto 100% orgánico con energía sostenida</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="grupo-botones">
+                        <a href="productos.html" class="btn btn-primario">Ver Todos los Productos</a>
+                        <a href="calculadora.html" class="btn btn-secundario">Cotizar Pedido en Calculadora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER CORPORATIVO GLOBAL -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="footer-grid">
+                <!-- COLUMNA 1: RESUMEN DE MARCA -->
+                <div class="footer-columna">
+                    <h2>MATCHABAR</h2>
+                    <p>
+                        Concentrado líquido natural de té matcha en formato práctico ready-to-pour. Energía limpia, sin azúcar añadida y en empaque reciclable rPET para acompañar tu ritmo diario.
+                    </p>
+                    <span class="eslogan-script">Más verde, más tú.</span>
+                </div>
+
+                <!-- COLUMNA 2: ENLACES RÁPIDOS -->
+                <div class="footer-columna">
+                    <h2>Navegación Rápida</h2>
+                    <ul class="footer-enlaces">
+                        <li><a href="index.html">&#8250; Inicio</a></li>
+                        <li><a href="nosotros.html">&#8250; Nosotros</a></li>
+                        <li><a href="productos.html">&#8250; Catálogo de Productos</a></li>
+                        <li><a href="calculadora.html">&#8250; Calculadora de Presupuesto</a></li>
+                        <li><a href="contacto.html">&#8250; Contacto y Horarios</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 3: UBICACIÓN Y WHATSAPP DIRECTO -->
+                <div class="footer-columna">
+                    <h2>Sede Caracas</h2>
+                    <div class="footer-meta">
+                        Av. Universidad, Parroquia La Candelaria, C.C. Parque Caracas, Local 14.<br>
+                        Municipio Libertador, Distrito Capital, Venezuela.<br>
+                        Tel: +58 212-555-8490 &bull; contacto@matchabarve.com<br>
+                        Redes: @matchabar.ve
+                    </div>
+                    <a href="https://wa.link/dwrt1z" target="_blank" rel="noopener noreferrer" class="btn btn-claro btn-sm">
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRANJA DE DERECHOS DE AUTOR -->
+        <div class="footer-base">
+            <div class="contenedor">
+                &copy; 2026 MatchaBar Venezuela — Distrito Capital, Municipio Libertador. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT GENERAL DEL SITIO -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- METADATOS Y CONFIGURACIÓN BASE DEL DOCUMENTO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pack Matcha Iced Latte Ready-to-Pour de MatchaBar: prepara iced lattes cremosos en 15 segundos. Modo de preparación, porciones y tabla de rendimiento.">
+    <title>MatchaBar | Pack Matcha Iced Latte Ready-to-Pour</title>
+
+    <!-- FUENTES DE GOOGLE FONTS (MONTSERRAT Y DANCING SCRIPT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- HOJA DE ESTILOS EXTERNA PRINCIPAL -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER GLOBAL CON LOGOTIPO Y NAVEGACIÓN HORIZONTAL -->
+    <header class="site-header">
+        <div class="contenedor header-contenedor">
+            <!-- LOGOTIPO CORPORATIVO MATCHABAR CON ÍCONO SVG BOTÁNICO -->
+            <a href="index.html" class="logo-marca" aria-label="Inicio de MatchaBar">
+                <svg class="logo-icono" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M32 54C32 54 12 42 12 22C12 16 16 10 22 10C28 10 32 18 32 24C32 18 36 10 42 10C48 10 52 16 52 22C52 42 32 54 32 54Z" fill="#A1C349"/>
+                    <path d="M32 54V22" stroke="#243010" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M32 36L21 26" stroke="#243010" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M32 32L43 22" stroke="#243010" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span>MATCHABAR</span>
+            </a>
+
+            <!-- BOTÓN DE MENÚ MÓVIL -->
+            <button type="button" class="btn-menu-movil" id="btn-menu-movil" aria-label="Abrir menú de navegación" aria-expanded="false">
+                &#9776;
+            </button>
+
+            <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
+            <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-enlace">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-enlace">Nosotros</a>
+                    </li>
+                    <!-- ELEMENTO CON SUBMENÚ DESPLEGABLE ANIMADO EN CSS -->
+                    <li class="nav-item tiene-submenu">
+                        <a href="productos.html" class="nav-enlace activo">
+                            Productos <span class="flecha-submenu" aria-hidden="true">&#9662;</span>
+                        </a>
+                        <!-- SUBMENÚ DE PRODUCTOS Y SERVICIOS -->
+                        <ul class="submenu" aria-label="Submenú de productos">
+                            <li>
+                                <a href="producto-cold-brew.html" class="submenu-enlace">Cold Brew Concentrate 350 ml</a>
+                            </li>
+                            <li>
+                                <a href="producto-iced-latte.html" class="submenu-enlace activo">Matcha Iced Latte Ready-to-Pour</a>
+                            </li>
+                            <li>
+                                <a href="producto-kit-ceremonial.html" class="submenu-enlace">Kit Ritual Ceremonial &amp; Chasen</a>
+                            </li>
+                            <li>
+                                <a href="producto-pack-corporativo.html" class="submenu-enlace">Pack Corporativo &amp; Suscripción</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculadora.html" class="nav-enlace">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-enlace">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BARRA DE RUTA (MIGA DE PAN) -->
+    <div class="barra-ruta">
+        <div class="contenedor">
+            <a href="index.html">Inicio</a> &rsaquo; <a href="productos.html">Productos</a> &rsaquo; <span>Matcha Iced Latte Ready-to-Pour</span>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL DE LA FICHA ICED LATTE -->
+    <main>
+
+        <!-- SECCIÓN 1: PRESENTACIÓN DEL PACK ICED LATTE -->
+        <section class="seccion seccion-crema animar-entrada" id="ficha-iced-latte">
+            <div class="contenedor">
+                <div class="split-layout">
+                    <!-- IMAGEN PROTAGONISTA DE TEXTURA HELADA -->
+                    <div class="split-media">
+                        <figure class="marco-imagen">
+                            <img src="assets/img/matcha-helado-textura.jpg" alt="Primer plano cremoso de Matcha Iced Latte frío sobre cubos de hielo">
+                        </figure>
+                    </div>
+
+                    <!-- DESCRIPCIÓN COMERCIAL Y PRECIO -->
+                    <div class="split-contenido">
+                        <span class="etiqueta-superior">Dúo Refrescante &bull; 700 ml Totales</span>
+                        <h1>Pack Matcha Iced Latte Ready-to-Pour</h1>
+                        <span class="eslogan-script">Refrescante, cremoso y sin grumos.</span>
+                        <div class="producto-precio">$26.00 USD</div>
+
+                        <p>
+                            Pensado especialmente para el clima cálido y dinámico de Caracas, el Pack Matcha Iced Latte Ready-to-Pour reúne dos botellas de nuestro concentrado MatchaBar Cold Brew de 350 ml (700 ml en total) junto a nuestra guía digital de maridajes barista con bebidas de avena, almendra, coco o leche entera.
+                        </p>
+                        <p>
+                            Disfruta el efecto visual bicolor de cafetería de especialidad desde tu casa u oficina en menos de 15 segundos, manteniendo una textura suave, vibrante y sin residuos sólidos en el fondo del vaso.
+                        </p>
+
+                        <div class="sellos-lista">
+                            <span class="badge-matcha">&#10003; 2 Botellas de 350 ml</span>
+                            <span class="badge-matcha">&#10003; 14 Porciones Frías</span>
+                            <span class="badge-matcha">&#10003; Recetario Barista Incluido</span>
+                        </div>
+
+                        <div class="grupo-botones">
+                            <a href="https://wa.link/dwrt1z" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">Comprar por WhatsApp</a>
+                            <a href="calculadora.html" class="btn btn-primario">Agregar a Presupuesto</a>
+                            <a href="productos.html" class="btn btn-secundario">Volver al Catálogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: MODO DE PREPARACIÓN Y PORCIONES -->
+        <section class="seccion seccion-salvia animar-entrada" id="preparacion-iced-latte">
+            <div class="contenedor">
+                <div class="split-layout">
+                    <!-- PASO A PASO DE PREPARACIÓN -->
+                    <div class="split-contenido">
+                        <span class="etiqueta-superior">Guía Ready-to-Pour</span>
+                        <h2>Modo de Preparación en 4 Pasos</h2>
+                        <p>
+                            No necesitas batidores eléctricos ni agua hirviendo. Aprovecha la ventana medidora de cada botella para lograr siempre el balance exacto entre intensidad herbal y cremosidad.
+                        </p>
+
+                        <ul class="lista-especificaciones">
+                            <li>
+                                <strong>Paso 1 — Agita suavemente:</strong> Antes de abrir la tapa hermética, agita la botella durante 5 segundos para activar las partículas finas de té matcha orgánico.
+                            </li>
+                            <li>
+                                <strong>Paso 2 — Prepara la base fría:</strong> Llena un vaso alto con cubos de hielo y añade 180 ml de tu bebida vegetal favorita (avena o almendra sin azúcar) o agua fría con gas.
+                            </li>
+                            <li>
+                                <strong>Paso 3 — Dosifica 50 ml exactos:</strong> Vierte una porción de MatchaBar Cold Brew Concentrate guiándote por las marcas de la ventana lateral transparente.
+                            </li>
+                            <li>
+                                <strong>Paso 4 — Personaliza y disfruta:</strong> Si deseas un toque dulce natural, agrega unas gotas de miel, extracto de vainilla o jarabe de agave; revuelve y saborea al instante.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- IMAGEN COMPLEMENTARIA SOBRE PIEDRA -->
+                    <div class="split-media">
+                        <figure class="marco-imagen">
+                            <img src="assets/img/hero-botella-piedra.jpg" alt="Botella MatchaBar Cold Brew Concentrate sobre piedra junto a hojas verdes y cuenco de matcha">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: TABLA DE RENDIMIENTO POR RECETA -->
+        <section class="seccion seccion-blanca animar-entrada" id="tabla-rendimiento-latte">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="etiqueta-superior">Control de Consumo</span>
+                    <h2>Tabla de Rendimiento del Pack (700 ml Totales)</h2>
+                    <p>
+                        Calcula cuántas bebidas puedes preparar con tu Pack Matcha Iced Latte según el estilo de preparación y la intensidad deseada.
+                    </p>
+                </div>
+
+                <!-- TABLA HTML SEMÁNTICA DE RENDIMIENTO -->
+                <div class="tabla-contenedor">
+                    <table class="tabla-matcha">
+                        <thead>
+                            <tr>
+                                <th>Estilo de Bebida</th>
+                                <th>Dosis de Concentrado</th>
+                                <th>Base Líquida Sugerida</th>
+                                <th class="celda-numero">Rendimiento del Pack</th>
+                                <th class="celda-numero">Costo Aprox. por Vaso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Iced Matcha Latte Clásico</strong></td>
+                                <td>50 ml</td>
+                                <td>180 ml leche de avena o almendra + hielo</td>
+                                <td class="celda-numero">14 bebidas</td>
+                                <td class="celda-numero">$1.86 USD</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Matcha Tonic Cítrico</strong></td>
+                                <td>40 ml</td>
+                                <td>200 ml agua tónica + rodaja de limón</td>
+                                <td class="celda-numero">17 bebidas</td>
+                                <td class="celda-numero">$1.53 USD</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Double Shot Pre-Entreno</strong></td>
+                                <td>70 ml</td>
+                                <td>150 ml agua fría o agua de coco</td>
+                                <td class="celda-numero">10 bebidas</td>
+                                <td class="celda-numero">$2.60 USD</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Matcha Smoothie Verde</strong></td>
+                                <td>50 ml</td>
+                                <td>150 ml leche vegetal + cambur congelado</td>
+                                <td class="celda-numero">14 bebidas</td>
+                                <td class="celda-numero">$1.86 USD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER CORPORATIVO GLOBAL -->
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="footer-grid">
+                <!-- COLUMNA 1: RESUMEN DE MARCA -->
+                <div class="footer-columna">
+                    <h2>MATCHABAR</h2>
+                    <p>
+                        Concentrado líquido natural de té matcha en formato práctico ready-to-pour. Energía limpia, sin azúcar añadida y en empaque reciclable rPET para acompañar tu ritmo diario.
+                    </p>
+                    <span class="eslogan-script">Más verde, más tú.</span>
+                </div>
+
+                <!-- COLUMNA 2: ENLACES RÁPIDOS -->
+                <div class="footer-columna">
+                    <h2>Navegación Rápida</h2>
+                    <ul class="footer-enlaces">
+                        <li><a href="index.html">&#8250; Inicio</a></li>
+                        <li><a href="nosotros.html">&#8250; Nosotros</a></li>
+                        <li><a href="productos.html">&#8250; Catálogo de Productos</a></li>
+                        <li><a href="calculadora.html">&#8250; Calculadora de Presupuesto</a></li>
+                        <li><a href="contacto.html">&#8250; Contacto y Horarios</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 3: UBICACIÓN Y WHATSAPP DIRECTO -->
+                <div class="footer-columna">
+                    <h2>Sede Caracas</h2>
+                    <div class="footer-meta">
+                        Av. Universidad, Parroquia La Candelaria, C.C. Parque Caracas, Local 14.<br>
+                        Municipio Libertador, Distrito Capital, Venezuela.<br>
+                        Tel: +58 212-555-8490 &bull; contacto@matchabarve.com<br>
+                        Redes: @matchabar.ve
+                    </div>
+                    <a href="https://wa.link/dwrt1z" target="_blank" rel="noopener noreferrer" class="btn btn-claro btn-sm">
+                        Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FRANJA DE DERECHOS DE AUTOR -->
+        <div class="footer-base">
+            <div class="contenedor">
+                &copy; 2026 MatchaBar Venezuela — Distrito Capital, Municipio Libertador. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT GENERAL DEL SITIO -->
+    <script src="js/main.js"></script>
+</body>
+</html>
